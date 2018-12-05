@@ -6,22 +6,33 @@
     <v-layout row wrap>
       <v-flex xs12 sm12 md4 v-for="detail in details" :key="detail.title">
         <v-card>
-          <v-img :src="detail.img" height="500px">
-            <v-container fill-height fluid>
-              <v-layout fill-height>
-                <v-flex xs12 align-end flexbox>
-                  <span class="headline white--text">{{ detail.title }}</span>
-                </v-flex>
-              </v-layout>
-            </v-container>
-          </v-img>
+          <v-responsive>
+            <v-img :src="detail.img" height="500px">
+              <v-container fill-height fluid>
+                <v-layout fill-height>
+                  <v-flex xs12 align-end flexbox>
+                    <span class="headline white--text">{{ detail.title }}</span>
+                  </v-flex>
+                </v-layout>
+              </v-container>
+            </v-img>
+          </v-responsive>
 
-          <v-card-title primary-title>
+          <v-card-text primary-title>
             <div>
               <h3 class="headline mb-0">{{detail.subtitle }}</h3>
               <div>{{ detail.content }}</div>
             </div>
-          </v-card-title>
+          </v-card-text>
+
+          <v-card-actions v-if="['menu'].includes($route.name)">
+            <v-btn
+              outline
+              block
+              color="green"
+              @click="showRecipes('detail.subtitle')"
+            >Select This Plan</v-btn>
+          </v-card-actions>
         </v-card>
       </v-flex>
     </v-layout>
@@ -57,6 +68,11 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    showRecipes(plan) {
+      this.$store.dispatch("getRecipes", plan);
+    }
   }
 };
 </script>
