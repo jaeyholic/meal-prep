@@ -27,7 +27,7 @@ export default {
   name: "Navigation",
   data() {
     return {
-      appTitle: "Meal Prep",
+      appTitle: "Foodify",
       drawer: false,
       items: [{ title: "Menu" }, { title: "Sign In" }, { title: "Join" }]
     };
