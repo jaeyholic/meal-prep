@@ -30,7 +30,7 @@
               outline
               block
               color="green"
-              @click="showRecipes('detail.subtitle')"
+              @click="showRecipes('detail.btntext')"
             >Select This Plan</v-btn>
           </v-card-actions>
         </v-card>
@@ -49,6 +49,7 @@ export default {
           img: "http://source.unsplash.com/hjCA3ecCXAQ",
           title: "KETO",
           subtitle: "Keto",
+          btntext: "keto",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mauris felis, varius rutrum massa a, dignissim ornare dui. Cras eget velit eu dui tristique lobortis sit amet vel tellus."
         },
@@ -56,6 +57,7 @@ export default {
           img: "http://source.unsplash.com/6S27S6pZ6o0",
           title: "PALEO",
           subtitle: "Paleo",
+          btntext: "paleo",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mauris felis, varius rutrum massa a, dignissim ornare dui. Cras eget velit eu dui tristique lobortis sit amet vel tellus."
         },
@@ -63,6 +65,7 @@ export default {
           img: "http://source.unsplash.com/1SPu0KT-Ejg",
           title: "VEGAN",
           subtitle: "Vegan",
+          btntext: "vegan",
           content:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mauris felis, varius rutrum massa a, dignissim ornare dui. Cras eget velit eu dui tristique lobortis sit amet vel tellus."
         }
